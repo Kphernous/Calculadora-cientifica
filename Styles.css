@@ -4,35 +4,88 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Fondo oscuro */
     margin: 0;
+    color: #e0e0e0; /* Color de texto claro */
 }
 
 .calculator {
-    background: #222;
+    background: #1e1e1e; /* Fondo oscuro para la calculadora */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
     text-align: center;
+    border: 2px solid #333; /* Borde sutil */
 }
 
 #display {
     width: 100%;
-    height: 50px;
-    font-size: 1.5em;
+    height: 60px;
+    font-size: 2em;
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     border: none;
-    background: #333;
-    color: white;
-    border-radius: 5px;
+    background: #2c2c2c; /* Fondo oscuro para la pantalla */
+    color: #e0e0e0; /* Color de texto claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra interior */
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px; /* Espacio entre botones */
+}
+
+.btn {
+    width: 80px; /* Botones más grandes */
+    height: 80px;
+    font-size: 1.5em;
+    border: none;
+    background: #333; /* Fondo oscuro para los botones */
+    color: #e0e0e0; /* Color de texto claro */
+    border-radius: 12px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para efecto 3D */
+}
+
+.btn:hover {
+    background: #555; /* Color de fondo más claro al pasar el mouse */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Efecto de presión al hacer clic */
+}
+
+.btn.operator {
+    background: #ff9500; /* Color naranja para operadores */
+    color: #121212; /* Texto oscuro para contraste */
+}
+
+.btn.operator:hover {
+    background: #ffaa33; /* Color naranja más claro al pasar el mouse */
+}
+
+.btn.clear {
+    background: #ff3b30; /* Color rojo para el botón de limpiar */
+    color: #121212; /* Texto oscuro para contraste */
+}
+
+.btn.clear:hover {
+    background: #ff5c5c; /* Color rojo más claro al pasar el mouse */
+}
+
+.btn.equals {
+    background: #34c759; /* Color verde para el botón de igual */
+    color: #121212; /* Texto oscuro para contraste */
+    grid-column: span 2; /* Ocupa dos columnas */
+    width: 100%; /* Ancho completo */
+}
+
+.btn.equals:hover {
+    background: #4cd964; /* Color verde más claro al pasar el mouse */
 }
 
 .btn {
