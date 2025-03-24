@@ -13,9 +13,27 @@ function deleteLast() {
 
 function calculateResult() {
     try {
-        let result = eval(document.getElementById("display").value);
+        let expression = document.getElementById("display").value;
+        let result = eval(expression);
         document.getElementById("display").value = result;
     } catch (error) {
         document.getElementById("display").value = "Error";
     }
+}
+
+// Funciones para operaciones básicas
+function add() {
+    appendValue('+');
+}
+
+function subtract() {
+    appendValue('-');
+}
+
+function multiply() {
+    appendValue('*');
+}
+
+function divide() {
+    appendValue('/');
 }
